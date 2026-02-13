@@ -1,0 +1,52 @@
+:root{
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted:#94a3b8;
+  --card:#111827;
+  --accent:#0ea5e9;
+  --accent-2:#22d3ee;
+}
+:root.light{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --card:#f1f5f9;
+  --accent:#2563eb;
+  --accent-2:#22c55e;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+.container{max-width:1100px;margin:auto;padding:1.2rem}
+.site-header{display:flex;gap:1rem;align-items:center;justify-content:space-between;position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,.35), transparent);backdrop-filter:saturate(140%) blur(6px);z-index:10}
+.logo{font-weight:800;text-decoration:none;color:var(--text);letter-spacing:.2px}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover{color:var(--text)}
+.btn{border:1px solid color-mix(in oklab, var(--text) 20%, transparent);background:transparent;color:var(--text);padding:.6rem .9rem;border-radius:.7rem;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;border:none}
+.btn.ghost{border:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:2rem;min-height:60vh}
+.hero h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.05;margin:.2rem 0 .6rem}
+.gradient{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{background:linear-gradient(180deg, color-mix(in oklab, var(--card) 92%, transparent), transparent 120%);border:1px solid color-mix(in oklab, var(--text) 10%, transparent);padding:1rem;border-radius:1rem}
+.hero-card{display:grid;gap:1rem}
+.features .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.feature{background:linear-gradient(180deg, color-mix(in oklab, var(--card) 95%, transparent), transparent 120%);padding:1rem;border-radius:1rem;border:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.gallery figure{margin:0}
+.gallery img{width:100%;border-radius:.8rem;border:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+.contact form{display:grid;gap:.8rem}
+input,textarea{width:100%;padding:.7rem .9rem;border-radius:.6rem;border:1px solid color-mix(in oklab, var(--text) 15%, transparent);background:color-mix(in oklab, var(--card) 94%, transparent);color:var(--text)}
+.muted{color:var(--muted)}
+.site-footer{border-top:1px solid color-mix(in oklab, var(--text) 10%, transparent);margin-top:3rem}
+#menuToggle{display:none}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .features .grid,.gallery-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .nav{display:none;position:absolute;right:1rem;top:60px;flex-direction:column;background:var(--card);padding:1rem;border-radius:.8rem;border:1px solid color-mix(in oklab, var(--text) 10%, transparent)}
+  .nav.show{display:flex}
+  #menuToggle{display:inline-flex}
+  .features .grid,.gallery-grid{grid-template-columns:1fr}
+}
