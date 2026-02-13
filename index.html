@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hieno Netti­sivu</title>
+  <meta name="description" content="Kevyt, responsiivinen ja tyylikäs sivupohja GitHub Pages -julkaisuun.">
+  <meta name="theme-color" content="#0ea5e9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <a class="logo" href="#">HienoSivu</a>
+    <nav id="nav" class="nav">
+      <a href="#etusivu">Etusivu</a>
+      <a href="#ominaisuudet">Ominaisuudet</a>
+      <a href="#galleria">Galleria</a>
+      <a href="#ota-yhteytta">Ota yhteyttä</a>
+    </nav>
+    <button id="themeToggle" class="btn ghost" aria-label="Vaihda teema">🌙</button>
+    <button id="menuToggle" class="btn ghost" aria-label="Avaa valikko">☰</button>
+  </header>
+
+  <main>
+    <section id="etusivu" class="hero container">
+      <div class="hero-text">
+        <h1>Rakenna sivu, joka <span class="gradient">erottuu</span></h1>
+        <p>Moderni, nopea ja helppo pohja GitHub Pagesille. Muokkaa tekstit, kuvat ja värit – julkaise minuuteissa.</p>
+        <div class="cta">
+          <a class="btn primary" href="#ominaisuudet">Aloita</a>
+          <a class="btn" href="#galleria">Katso esimerkkejä</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card">
+          <h2>Nopea julkaista</h2>
+          <p>Ei backendia, ei asennuksia. Pelkät HTML/CSS/JS -tiedostot.</p>
+        </div>
+        <div class="card">
+          <h2>Responsiivinen</h2>
+          <p>Toimii puhelimella, tabletilla ja pöytäkoneella.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="ominaisuudet" class="features container">
+      <h2>Ominaisuudet</h2>
+      <div class="grid">
+        <article class="feature">
+          <h3>Tumma / vaalea teema</h3>
+          <p>Automaattinen teema-asetus sekä manuaalinen vaihtaja (🌙/☀️).</p>
+        </article>
+        <article class="feature">
+          <h3>Yksi sivu</h3>
+          <p>Sulava vieritys navigaation linkeistä osioihin.</p>
+        </article>
+        <article class="feature">
+          <h3>Helppo muokata</h3>
+          <p>Selkeä rakenne ja kommentit koodissa.</p>
+        </article>
+        <article class="feature">
+          <h3>Kevyt</h3>
+          <p>Ei riippuvuuksia. Lataa nopeasti GitHub Pagesilla.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galleria" class="gallery container">
+      <h2>Galleria</h2>
+      <div class="gallery-grid">
+        <figure><img src="assets/img/placeholder.svg" alt="Esimerkkikuva 1"><figcaption>Esimerkki 1</figcaption></figure>
+        <figure><img src="assets/img/placeholder.svg" alt="Esimerkkikuva 2"><figcaption>Esimerkki 2</figcaption></figure>
+        <figure><img src="assets/img/placeholder.svg" alt="Esimerkkikuva 3"><figcaption>Esimerkki 3</figcaption></figure>
+        <figure><img src="assets/img/placeholder.svg" alt="Esimerkkikuva 4"><figcaption>Esimerkki 4</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="ota-yhteytta" class="contact container">
+      <h2>Ota yhteyttä</h2>
+      <form id="contactForm" class="card" netlify>
+        <label>Nimi
+          <input name="name" type="text" placeholder="Etunimi Sukunimi" required>
+        </label>
+        <label>Sähköposti
+          <input name="email" type="email" placeholder="nimi@posti.fi" required>
+        </label>
+        <label>Viesti
+          <textarea name="message" rows="4" placeholder="Hei!" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Lähetä</button>
+        <p id="formMsg" class="muted" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p>© <span id="year"></span> HienoSivu · Tehty GitHub Pagesia varten</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
